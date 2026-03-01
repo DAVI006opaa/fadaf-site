@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FADAF | Smart Mobility & Energy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0b1220; color: #e6edf7; line-height: 1.6; scroll-behavior: smooth; }
+
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(11,18,32,.85);
+      backdrop-filter: blur(10px);
+      padding: 16px 32px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    nav strong { font-size: 1.3rem; letter-spacing: .5px; }
+    nav a { color: #e6edf7; text-decoration: none; margin-left: 22px; font-size: .95rem; opacity: .9; }
+    nav a:hover { opacity: 1; }
+
+    header {
+      background: radial-gradient(circle at 30% 20%,#1b3fff33,transparent 40%),
+                  linear-gradient(135deg,#0f1b35,#142a5a);
+      padding: 100px 20px 90px;
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1 { font-size: 3.2rem; font-weight: 800; margin-bottom: 18px; }
+    header p { max-width: 820px; margin: auto; opacity: .92; font-size: 1.05rem; }
+
+    section { padding: 80px 20px; max-width: 1150px; margin: auto; }
+    h2 { font-size: 2.2rem; margin-bottom: 22px; }
+
+    .grid { display: grid; gap: 26px; }
+    .grid-3 { grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); }
+
+    .card {
+      background: #111a30;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px;
+      padding: 28px;
+      transition: .25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg,transparent,rgba(47,107,255,.18),transparent);
+      opacity: 0;
+      transition: .25s;
+    }
+
+    .card:hover::after { opacity: 1; }
+    .card:hover { transform: translateY(-6px); border-color: #2f6bff; }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 20px;
+      margin-top: 34px;
+      box-shadow: 0 25px 60px rgba(0,0,0,.45);
+    }
+
+    .highlight {
+      background: linear-gradient(135deg,#2f6bff,#00d4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .tech-box {
+      background: linear-gradient(135deg,#101a33,#0e244d);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 22px;
+      padding: 32px;
+      margin-top: 30px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 28px;
+      background: linear-gradient(135deg,#2f6bff,#00c2ff);
+      padding: 15px 28px;
+      border-radius: 14px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(47,107,255,.35);
+      transition: .2s;
+    }
+
+    .cta:hover { transform: translateY(-2px); }
+
+    footer {
+      text-align: center;
+      padding: 45px 20px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      opacity: .75;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <strong>FADAF</strong>
+  <div>
+    <a href="#solution">Solução</a>
+    <a href="#tech">Arquitetura</a>
+    <a href="#story">História</a>
+    <a href="#impact">Impacto</a>
+  </div>
+</nav>
+
+<header>
+  <h1>FADAF Smart Urban Intelligence</h1>
+  <p>
+    Transformamos as faixas exclusivas do Rio em uma rede de
+    <span class="highlight">energia limpa, dados em tempo real e inteligência operacional</span>,
+    apoiando decisões estratégicas do COR e elevando o transporte público a um novo padrão.
+  </p>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=1600&auto=format&fit=crop" alt="Rio de Janeiro">
+</header>
+
+<section id="solution">
+  <h2>A Solução AutoEcoCharge</h2>
+  <p>
+    A FADAF desenvolve infraestrutura inteligente baseada em sensores piezoelétricos,
+    IoT e Inteligência Artificial para monitorar, analisar e prever a eficiência
+    energética e operacional das faixas exclusivas do SPPO. A via passa a gerar
+    energia, produzir dados urbanos e alimentar decisões em tempo real do COR.
+  </p>
+
+  <div class="grid grid-3" style="margin-top:32px;">
+    <div class="card">
+      <h3>⚡ Geração Inteligente</h3>
+      <p>Energia limpa produzida pelo próprio fluxo dos ônibus.</p>
+    </div>
+    <div class="card">
+      <h3>📡 Sensoriamento IoT</h3>
+      <p>Monitoramento contínuo de fluxo, carga e intensidade operacional.</p>
+    </div>
+    <div class="card">
+      <h3>🧠 IA Preditiva</h3>
+      <p>Previsão de demanda energética e apoio à decisão do COR.</p>
+    </div>
+  </div>
+</section>
+
+<section id="tech">
+  <h2>Arquitetura Técnica</h2>
+  <div class="tech-box">
+    <p>
+      A arquitetura FADAF integra sensores piezoelétricos, dispositivos IoT,
+      edge computing e modelos de IA em uma pipeline urbana de baixa latência.
+      Os dados são processados localmente na via e enviados em tempo real para
+      a plataforma central conectada ao ecossistema do COR, permitindo
+      previsões operacionais, energéticas e climáticas com alta precisão.
+    </p>
+  </div>
+</section>
+
+<section id="story">
+  <h2>Nossa Trajetória</h2>
+  <p>
+    A FADAF nasceu em 2023 na Usina de Startup e evoluiu a partir de desafios
+    reais de infraestrutura urbana. Com reconhecimento da comunidade AKCIT
+    e experiência acumulada em hackathons e projetos de engenharia,
+    a equipe construiu uma solução tecnicamente robusta e pronta para pilotos urbanos.
+  </p>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1544986581-efac024faf62?q=80&w=1600&auto=format&fit=crop" alt="Ponte Rio Niteroi">
+</section>
+
+<section id="impact">
+  <h2>Impacto para o Rio</h2>
+  <p>
+    A solução FADAF reduz custos operacionais, aumenta a eficiência energética
+    do transporte público e fortalece a capacidade preditiva do Centro de Operações.
+    O projeto posiciona o Rio de Janeiro como referência latino-americana
+    em mobilidade inteligente e infraestrutura urbana orientada por dados.
+  </p>
+  <a class="cta" href="https://calendar.app.google/fL8J2PF4xXmeZx4S9" target="_blank">Falar com a equipe</a>
+</section>
+
+<footer>
+  © 2026 FADAF — Urban Intelligence Platform
+</footer>
+
+</body>
+</html>
